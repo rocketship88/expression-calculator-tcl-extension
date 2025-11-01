@@ -32,7 +32,7 @@ switch (buf[0]) {
     
     case 'm':  // First letter of "myfun"
         if (mystrcmp(buf, "myfun") == 0) {
-            return eMYFUNC;
+            return eMYFUN;
         }
         break;
     
