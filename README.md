@@ -100,13 +100,13 @@ cl /O2 /Ob2 /Oi /Ot /GL  /DUSE_TCL_STUBS /DTCL9 -IC:\Path\To\Tcl\include myext.c
 
 ### Linux
 ```bash
-gcc -shared -fPIC -o myext.so myext.c expression.c \
+gcc -O3 -march=native -flto -shared -fPIC -o myext.so myext.c expression.c \
     -I/usr/include/tcl8.6 -ltclstub8.6
 ```
 
 If Tcl headers are in a different location:
 ```bash
-gcc -shared -fPIC -o myext.so myext.c expression.c \
+gcc -O3 -march=native -flto -shared -fPIC -o myext.so myext.c expression.c \
     $(pkg-config --cflags tcl) -ltclstub8.6
 ```
 
