@@ -43,7 +43,7 @@ load ./myext.dll  ;# Windows (or myext.so on Linux)
 = 10 / 3                 # Returns: 3.333... (float - has fractional part)
 
 # Safe with user input (avoids code injection)
-set user_input "[file delete *]"
+set user_input {[file delete *]}
 = $user_input            # ERROR: Invalid syntax - command never executes
 
 # Integer vs floating-point
