@@ -2,6 +2,8 @@
 
 The expression evaluator can be extended with new functions in **3 simple steps**.
 
+**CAUTION there are conditional debug statements out past column 180** Be careful not to place anything inside those lines. They are there so as not to obscure the view of the code.
+
 ## Requirements
 
 - Function names must be 2-5 characters
